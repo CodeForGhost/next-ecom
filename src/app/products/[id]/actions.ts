@@ -11,7 +11,7 @@ export async function incrementProductQuantity(productId: string) {
 
   if (articleInCart) {
     await prisma.cartItem.update({
-      where: { id: articleInCart },
+      where: { id: articleInCart.id },
       data: { quantity: { increment: 1 } },
     });
   } else {
@@ -24,5 +24,5 @@ export async function incrementProductQuantity(productId: string) {
     });
   }
 
-  revalidatePath("/products/{id}");
+  revalidatePath("/products/[id]");
 }
