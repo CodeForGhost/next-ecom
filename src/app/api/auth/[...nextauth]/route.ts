@@ -1,7 +1,7 @@
 import { authOptions } from "@/lib/auth";
 import NextAuth from "next-auth/next";
 import { mergeAnonymousCartIntoUserCart } from "@/lib/db/cart";
-import prisma from "@/lib/db/primsa";
+import {prisma} from "@/lib/db/primsa";
 import { env } from "@/lib/env";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { NextAuthOptions } from "next-auth";

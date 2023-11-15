@@ -1,4 +1,4 @@
-import prisma from "@/lib/db/primsa";
+import {prisma} from "@/lib/db/primsa";
 import ProductCard from "./../components/ProductCard";
 import Image from "next/image";
 import Link from "next/link";
